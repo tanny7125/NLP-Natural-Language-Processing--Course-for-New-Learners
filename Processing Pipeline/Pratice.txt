@@ -1,0 +1,32 @@
+Excersie: 1
+Get all the proper nouns from a given text in a list and also count how many of them.
+Proper Noun means a noun that names a particular person, place, or thing.
+
+text = '''Ravi and Raju are the best friends from school days.They wanted to go for a world tour and 
+visit famous cities like Paris, London, Dubai, Rome etc and also they called their another friend Mohan to take part of this world tour.
+They started their journey from Hyderabad and spent next 3 months travelling all the wonderful cities in the world and cherish a happy moments!
+'''
+
+# https://spacy.io/usage/linguistic-features
+
+#creating the nlp object
+doc = nlp(text)   
+Expected Output
+
+Proper Nouns: [Ravi, Raju, Paris, London, Dubai, Rome, Mohan, Hyderabad]
+
+Count: 8
+
+Excersie: 2
+Get all companies names from a given text and also the count of them.
+Hint: Use the spacy ner functionality
+text = '''The Top 5 companies in USA are Tesla, Walmart, Amazon, Microsoft, Google and the top 5 companies in 
+India are Infosys, Reliance, HDFC Bank, Hindustan Unilever and Bharti Airtel'''
+
+
+doc = nlp(text)
+Expected Output
+
+Company Names: [Tesla, Walmart, Amazon, Microsoft, Google, Infosys, Reliance, HDFC Bank, Hindustan Unilever, Bharti Airtel]
+
+Count: 10

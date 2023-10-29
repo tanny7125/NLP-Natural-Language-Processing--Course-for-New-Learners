@@ -1,0 +1,11 @@
+1. Extract all twitter handles from following text. Twitter handle is the text that appears after https://twitter.com/ and is a single word. Also it contains only alpha numeric characters i.e. A-Z a-z , o to 9 and underscore _
+
+2. Extract Concentration Risk Types. It will be a text that appears after "Concentration Risk:", In below example, your regex should extract these two strings
+
+(1) Credit Risk
+
+(2) Supply Rish
+
+3. Companies in europe reports their financial numbers of semi annual basis and you can have a document like this. To exatract quarterly and semin annual period you can use a regex as shown below
+
+Hint: you need to use (?:) here to match everything enclosed

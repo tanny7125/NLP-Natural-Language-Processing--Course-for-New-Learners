@@ -1,0 +1,87 @@
+Exercise1:
+
+From a Given Text, Count the number of stop words in it.
+Print the percentage of stop word tokens compared to all tokens in a given text.
+text = '''
+Thor: Love and Thunder is a 2022 American superhero film based on Marvel Comics featuring the character Thor, produced by Marvel Studios and 
+distributed by Walt Disney Studios Motion Pictures. It is the sequel to Thor: Ragnarok (2017) and the 29th film in the Marvel Cinematic Universe (MCU).
+The film is directed by Taika Waititi, who co-wrote the script with Jennifer Kaytin Robinson, and stars Chris Hemsworth as Thor alongside Christian Bale, Tessa Thompson,
+Jaimie Alexander, Waititi, Russell Crowe, and Natalie Portman. In the film, Thor attempts to find inner peace, but must return to action and recruit Valkyrie (Thompson),
+Korg (Waititi), and Jane Foster (Portman)—who is now the Mighty Thor—to stop Gorr the God Butcher (Bale) from eliminating all gods.
+'''
+
+#step1: Create the object 'doc' for the given text using nlp()
+
+
+
+#step2: define the variables to keep track of stopwords count and total words count
+
+
+
+#step3: iterate through all the words in the document
+
+
+
+#step4: print the count of stop words
+
+    
+
+#step5: print the percentage of stop words compared to total words in the textExercise1:
+
+From a Given Text, Count the number of stop words in it.
+Print the percentage of stop word tokens compared to all tokens in a given text.
+text = '''
+Thor: Love and Thunder is a 2022 American superhero film based on Marvel Comics featuring the character Thor, produced by Marvel Studios and 
+distributed by Walt Disney Studios Motion Pictures. It is the sequel to Thor: Ragnarok (2017) and the 29th film in the Marvel Cinematic Universe (MCU).
+The film is directed by Taika Waititi, who co-wrote the script with Jennifer Kaytin Robinson, and stars Chris Hemsworth as Thor alongside Christian Bale, Tessa Thompson,
+Jaimie Alexander, Waititi, Russell Crowe, and Natalie Portman. In the film, Thor attempts to find inner peace, but must return to action and recruit Valkyrie (Thompson),
+Korg (Waititi), and Jane Foster (Portman)—who is now the Mighty Thor—to stop Gorr the God Butcher (Bale) from eliminating all gods.
+'''
+
+#step1: Create the object 'doc' for the given text using nlp()
+
+
+
+#step2: define the variables to keep track of stopwords count and total words count
+
+
+
+#step3: iterate through all the words in the document
+
+
+
+#step4: print the count of stop words
+
+    
+
+#step5: print the percentage of stop words compared to total words in the text
+
+Exercise2:
+
+Spacy default implementation considers "not" as a stop word. But in some scenarios removing 'not' will completely change the meaning of the statement/text. For Example, consider these two statements:
+
+- this is a good movie       ----> Positive Statement
+- this is not a good movie   ----> Negative Statement
+
+So, after applying stopwords to those 2 texts, both will return "good movie" and does not respect the polarity/sentiments of text.
+
+Now, your task is to remove this stop word "not" in spaCy and help in distinguishing the texts.
+
+Hint: GOOGLE IT! Google is your friend.
+
+#use this pre-processing function to pass the text and to remove all the stop words and finally get the cleaned form
+def preprocess(text):
+    doc = nlp(text)
+    no_stop_words = [token.text for token in doc if not token.is_stop]
+    return " ".join(no_stop_words)       
+
+
+#Step1: remove the stopword 'not' in spacy
+
+
+
+#step2: send the two texts given above into the pre-process function and store the transformed texts
+
+
+
+#step3: finally print those 2 transformed texts
